@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/models/Actors.php';
+require_once __DIR__ . '/models/Movie.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,31 +16,9 @@
 <body>
 
     <?php
-    class Movie
-    {
 
-
-        public $title;
-        public $year;
-        public $coverImage;
-        public $actors;
-
-        public function __construct($_title, $_year, $_coverImage, $_actors)
-        {
-            $this->title = $_title;
-            $this->year = $_year;
-            $this->coverImage = $_coverImage;
-            $this->actors = $_actors;
-        }
-
-        public function getActors()
-        {
-            return $this->actors;
-        }
-    }
-
-    $Spiderman = new Movie('Spiderman', 2002, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ebay.it%2Fitm%2F294993298977&psig=AOvVaw0p-qTb4e9nqSRih2f4uHfz&ust=1675526611359000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPC23JXd-fwCFQAAAAAdAAAAABAV', ['actor_1' => 'Spiderman', 'actor_2' => 'Moglie Spiderman', 'actor_3' => 'Zia Spiderman', 'actor_4' => 'Nonna Spiderman']);
-    $Batman = new Movie('Batman', 2022, 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.emp-online.it%2Fp%2Fthe-batman---comic-cover%2F518546.html&psig=AOvVaw3Qy30KMXXRmrYI9TeQZW9H&ust=1675526697453000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCICC4L7d-fwCFQAAAAAdAAAAABAE', ['actor_1' => 'Batman', 'actor_2' => 'Moglie Batman', 'actor_3' => 'Zia Batman']);
+    $Spiderman = new Movie('Spiderman', 2002, 'https://www.cinefacts.it/foto/h!spider-man-2-locandina-poster-cinefacts.jpg', new Actors('Spiderman', 'Nonna Spiderman', 'Zia Spiderman'));
+    $Batman = new Movie('Batman', 2022, 'https://www.emp-online.it/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dw0edd1db0/images/5/1/8/5/518546d.jpg?sfrm=png', new Actors('Batman', 'Nonna Batman', 'Nipote Batman'));
 
     $Spiderman->title = 'Spiderman 2';
 
