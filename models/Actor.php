@@ -1,5 +1,5 @@
 <?php
-class Actors
+class Actor
 {
 
     public $name;

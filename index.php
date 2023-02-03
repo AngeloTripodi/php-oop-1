@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/models/Actors.php';
+require_once __DIR__ . '/models/Actor.php';
 require_once __DIR__ . '/models/Movie.php';
 ?>
 
@@ -17,8 +17,8 @@ require_once __DIR__ . '/models/Movie.php';
 
     <?php
 
-    $Spiderman = new Movie('Spiderman', 2002, 'https://www.cinefacts.it/foto/h!spider-man-2-locandina-poster-cinefacts.jpg', new Actors('Spiderman', 'Nonna Spiderman', 'Zia Spiderman'));
-    $Batman = new Movie('Batman', 2022, 'https://www.emp-online.it/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dw0edd1db0/images/5/1/8/5/518546d.jpg?sfrm=png', new Actors('Batman', 'Nonna Batman', 'Nipote Batman'));
+    $Spiderman = new Movie('Spiderman', 2002, 'https://www.cinefacts.it/foto/h!spider-man-2-locandina-poster-cinefacts.jpg', new Actor('Spiderman', 'Rossi', 22));
+    $Batman = new Movie('Batman', 2022, 'https://www.emp-online.it/dw/image/v2/BBQV_PRD/on/demandware.static/-/Sites-master-emp/default/dw0edd1db0/images/5/1/8/5/518546d.jpg?sfrm=png', new Actor('Batman', 'Bianchi', '89'));
 
     $Spiderman->title = 'Spiderman 2';
 
@@ -27,7 +27,7 @@ require_once __DIR__ . '/models/Movie.php';
     <pre>
        <?php
         var_dump($Spiderman, $Batman);
-        var_dump($Batman->getActors());
+        var_dump($Batman->getActor());
         ?>
     </pre>
 </body>

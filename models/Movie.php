@@ -4,18 +4,18 @@ class Movie
     public $title;
     public $year;
     public $coverImage;
-    public $actors;
+    public $actor;
 
-    public function __construct($_title, $_year, $_coverImage, Actors $_actors)
+    public function __construct($_title, $_year, $_coverImage, Actor $_actor)
     {
         $this->title = $_title;
         $this->year = $_year;
         $this->coverImage = $_coverImage;
-        $this->actors = $_actors;
+        $this->actor = $_actor;
     }
 
-    public function getActors()
+    public function getActor()
     {
-        return $this->actors;
+        return $this->actor;
     }
 }
